@@ -1,4 +1,6 @@
+import { motion } from "framer-motion";
 import Head from "next/head";
+import Image from "next/image";
 
 const albums = [
   {
@@ -155,22 +157,53 @@ const albums = [
 ];
 
 const HomePage = () => {
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1 },
+  };
+
   return (
-    <div className="min-w-screen min-h-screen p-6 bg-gray-600 grid gap-6 grid-cols-5">
+    <div className="min-w-screen min-h-screen p-6 bg-gray-600">
       <Head>
         <title>Iron Maiden Albums</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {albums.map((album) => {
-        return (
-          <div
-            key={album.name}
-            className="h-80 bg-cover bg-no-repeat bg-center rounded shadow-lg flex"
-            style={{ backgroundImage: `url(${album.image})` }}
-          ></div>
-        );
-      })}
+      <motion.div
+        className="grid gap-6 grid-cols-5"
+        variants={container}
+        initial="hidden"
+        animate="show"
+      >
+        {albums.map((album) => {
+          return (
+            <motion.div
+              key={album.name}
+              className="h-80 rounded shadow-lg flex cursor-pointer relative"
+              variants={item}
+              whileHover={{ scale: 1.1 }}
+            >
+              <Image
+                alt={album.name}
+                src={album.image}
+                layout="fill"
+                objectFit="cover"
+                objectPosition="center"
+              />
+            </motion.div>
+          );
+        })}
+      </motion.div>
     </div>
   );
 };
