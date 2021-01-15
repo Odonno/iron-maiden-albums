@@ -2,7 +2,11 @@ module.exports = {
   purge: ["./components/**/*.{js,ts,jsx,tsx}", "./pages/**/*.{js,ts,jsx,tsx}"],
   darkMode: false,
   theme: {
-    extend: {},
+    extend: {
+      zIndex: {
+        "-1": "-1",
+      },
+    },
   },
   variants: {
     extend: {},

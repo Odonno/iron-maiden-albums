@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Error from "next/error";
+import Image from "next/image";
 import type {
   GetServerSidePropsContext,
   InferGetServerSidePropsType,
@@ -58,23 +59,27 @@ const AlbumPage = (
   };
 
   return (
-    <div className="min-w-screen min-h-screen p-12 bg-gray-600">
+    <div className="min-w-screen min-h-screen bg-gray-600 flex justify-center items-center">
       <Head>
         <title>Iron Maiden Albums - {album.name}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="flex flex-col justify-center items-center">
-        <motion.h2
-          className="text-3xl text-white font-bold"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-        >
-          {album.name}
-        </motion.h2>
+      <motion.div
+        className="p-6 min-h-screen-90 flex flex-col justify-center items-center bg-transparent shadow-lg bg-black relative z-0"
+        layoutId={album.name}
+      >
+        <Image
+          alt={album.name}
+          src={album.image}
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
+          className="rounded -z-1"
+        />
 
         <motion.div
-          className="mt-20 grid gap-6 grid-cols-5"
+          className="grid gap-6 grid-cols-5"
           variants={container}
           initial="hidden"
           animate="show"
@@ -86,16 +91,17 @@ const AlbumPage = (
                   key={song.name}
                   href={song.link || "#"}
                   target="_blank"
-                  className="p-4 bg-black bg-opacity-30 rounded-lg shadow text-white cursor-pointer"
+                  layout
+                  className="p-4 bg-black bg-opacity-30 bg-blur-5 rounded-lg shadow text-white cursor-pointer z-1"
                   variants={item}
-                  whileHover={{ scale: 1.1 }}
+                  whileHover={{ scale: 1.05 }}
                 >
                   {"> " + song.name}
                 </motion.a>
               );
             })}
         </motion.div>
-      </div>
+      </motion.div>
     </div>
   );
 };

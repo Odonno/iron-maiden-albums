@@ -37,9 +37,11 @@ const HomePage = () => {
           return (
             <Link key={album.name} href={`/albums/${album.slug}`}>
               <motion.a
-                className="h-80 rounded shadow-lg bg-transparent flex cursor-pointer relative"
+                className="h-80 shadow-lg flex cursor-pointer relative"
+                layout
+                layoutId={album.name}
                 variants={item}
-                whileHover={{ scale: 1.1 }}
+                whileHover={{ scale: 1.05 }}
               >
                 <Image
                   alt={album.name}
@@ -47,6 +49,7 @@ const HomePage = () => {
                   layout="fill"
                   objectFit="cover"
                   objectPosition="center"
+                  className="rounded"
                 />
               </motion.a>
             </Link>
