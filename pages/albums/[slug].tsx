@@ -1,21 +1,25 @@
 import Head from "next/head";
-import Error from "next/error";
 import Image from "next/image";
 import type {
-  GetServerSidePropsContext,
-  InferGetServerSidePropsType,
+  GetStaticPaths,
+  GetStaticProps,
+  GetStaticPropsContext,
+  InferGetStaticPropsType,
 } from "next";
-import { albums } from "../../models";
+import { Album, albums } from "../../models";
 import { motion } from "framer-motion";
 
-export const getServerSideProps = async (
-  context: GetServerSidePropsContext
+type Props = {
+  album: Album;
+};
+
+export const getStaticProps: GetStaticProps<Props> = async (
+  context: GetStaticPropsContext
 ) => {
   const { params } = context;
 
   if (params) {
     const { slug } = params as { slug: string };
-    console.log(slug);
     const album = albums.find((a) => a.slug === slug);
 
     if (album) {
@@ -28,20 +32,17 @@ export const getServerSideProps = async (
   }
 
   return {
-    props: {
-      album: undefined,
-    },
+    notFound: true,
   };
 };
 
-const AlbumPage = (
-  props: InferGetServerSidePropsType<typeof getServerSideProps>
-) => {
-  const { album } = props;
+export const getStaticPaths: GetStaticPaths = async () => {
+  const paths = albums.map((album) => `/albums/${album.slug}`);
+  return { paths, fallback: false };
+};
 
-  if (!album) {
-    return <Error statusCode={404} />;
-  }
+const AlbumPage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
+  const { album } = props;
 
   const container = {
     hidden: { opacity: 0 },

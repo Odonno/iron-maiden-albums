@@ -1,4 +1,18 @@
-export const albums = [
+export type Song = {
+  name: string;
+  duration: number;
+  link?: string;
+};
+
+export type Album = {
+  name: string;
+  slug: string;
+  image: string;
+  year: number;
+  songs?: Song[];
+};
+
+export const albums: Album[] = [
   {
     name: "Iron Maiden",
     slug: "iron-maiden",
