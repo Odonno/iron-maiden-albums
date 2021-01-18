@@ -87,6 +87,10 @@ const AlbumPage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
         >
           {album.songs &&
             album.songs.map((song) => {
+              const seconds = (song.duration % 60).toString().padStart(2, "0");
+              const minutes = Math.floor(song.duration / 60);
+              const durationText = `${minutes}:${seconds}`;
+
               return (
                 <motion.a
                   key={song.name}
@@ -97,7 +101,8 @@ const AlbumPage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
                   variants={item}
                   whileHover={{ scale: 1.05 }}
                 >
-                  {"> " + song.name}
+                  <div>{"> " + song.name}</div>
+                  <div className="text-sm italic">{durationText}</div>
                 </motion.a>
               );
             })}
