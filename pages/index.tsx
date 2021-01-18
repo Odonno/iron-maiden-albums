@@ -28,7 +28,7 @@ const HomePage = () => {
       </Head>
 
       <motion.div
-        className="grid gap-6 grid-cols-5"
+        className="grid gap-3 md:gap-6 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5"
         variants={container}
         initial="hidden"
         animate="show"

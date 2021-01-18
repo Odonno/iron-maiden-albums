@@ -67,7 +67,8 @@ const AlbumPage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
       </Head>
 
       <motion.div
-        className="p-6 min-h-screen-90 flex flex-col justify-center items-center bg-transparent shadow-lg bg-black relative z-0"
+        className="p-3 md:p-6 min-w-screen-60 min-h-screen-90 flex flex-col justify-center items-center bg-transparent shadow-lg bg-black relative z-0"
+        animate={{ scale: 1 }}
         layoutId={album.name}
       >
         <Image
@@ -80,7 +81,7 @@ const AlbumPage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
         />
 
         <motion.div
-          className="grid gap-6 grid-cols-5"
+          className="grid gap-2 md:gap-6 sm:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-5"
           variants={container}
           initial="hidden"
           animate="show"
@@ -97,7 +98,7 @@ const AlbumPage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
                   href={song.link || "#"}
                   target="_blank"
                   layout
-                  className="p-4 bg-black bg-opacity-30 bg-blur-5 rounded-lg shadow text-white cursor-pointer z-1"
+                  className="p-2 md:p-4 bg-black bg-opacity-30 bg-blur-5 rounded-lg shadow text-white cursor-pointer z-1"
                   variants={item}
                   whileHover={{ scale: 1.05 }}
                 >
