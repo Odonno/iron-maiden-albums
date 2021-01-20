@@ -92,17 +92,34 @@ const AlbumPage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
               const minutes = Math.floor(song.duration / 60);
               const durationText = `${minutes}:${seconds}`;
 
+              const isDisabled = !song.link;
+
+              if (isDisabled) {
+                return (
+                  <motion.div
+                    key={song.name}
+                    layout
+                    className="p-2 md:p-4 flex flex-col justify-center bg-gray-800 bg-opacity-60 rounded-lg shadow text-gray-300 z-1"
+                    variants={item}
+                  >
+                    <div>{"> " + song.name}</div>
+                    <div className="text-sm italic">{durationText}</div>
+                  </motion.div>
+                );
+              }
+
               return (
                 <motion.a
                   key={song.name}
                   href={song.link}
                   target="_blank"
                   layout
-                  className="p-2 md:p-4 flex flex-col justify-center bg-black bg-opacity-30 bg-blur-5 rounded-lg shadow text-white cursor-pointer z-1"
+                  aria-disabled={isDisabled}
+                  className="p-2 md:p-4 flex flex-col justify-center bg-black bg-opacity-30 disabled:opacity-50 disabled:bg-blue bg-blur-5 rounded-lg shadow text-white cursor-pointer z-1"
                   variants={item}
                   whileHover={{ scale: 1.05 }}
                 >
-                  <div>{"> " + song.name}</div>
+                  <div className="font-bold">{"> " + song.name}</div>
                   <div className="text-sm italic">{durationText}</div>
                 </motion.a>
               );
