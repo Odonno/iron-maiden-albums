@@ -95,10 +95,10 @@ const AlbumPage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
               return (
                 <motion.a
                   key={song.name}
-                  href={song.link || "#"}
+                  href={song.link}
                   target="_blank"
                   layout
-                  className="p-2 md:p-4 bg-black bg-opacity-30 bg-blur-5 rounded-lg shadow text-white cursor-pointer z-1"
+                  className="p-2 md:p-4 flex flex-col justify-center bg-black bg-opacity-30 bg-blur-5 rounded-lg shadow text-white cursor-pointer z-1"
                   variants={item}
                   whileHover={{ scale: 1.05 }}
                 >
