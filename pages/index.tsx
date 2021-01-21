@@ -28,7 +28,7 @@ const HomePage = () => {
       </Head>
 
       <motion.div
-        className="grid gap-3 md:gap-6 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5"
+        className="flex flex-wrap justify-evenly"
         variants={container}
         initial="hidden"
         animate="show"
@@ -37,7 +37,7 @@ const HomePage = () => {
           return (
             <Link key={album.name} href={`/albums/${album.slug}`}>
               <motion.a
-                className="h-80 shadow-lg flex cursor-pointer relative"
+                className="m-2 md:m-3 w-80 h-80 shadow-lg flex cursor-pointer relative"
                 layout
                 layoutId={album.name}
                 variants={item}
