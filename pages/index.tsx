@@ -50,6 +50,7 @@ const HomePage = () => {
                   objectFit="cover"
                   objectPosition="center"
                   className="rounded"
+                  priority={true}
                 />
               </motion.a>
             </Link>

@@ -78,6 +78,7 @@ const AlbumPage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
           objectFit="cover"
           objectPosition="center"
           className="rounded -z-1"
+          priority={true}
         />
 
         <motion.div
