@@ -61,7 +61,7 @@ const AlbumPage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
 
   return (
     <motion.div
-      className="w-screen h-screen bg-gray-600"
+      className="w-screen h-allscreen flex bg-gray-600"
       layoutId={album.name}
       animate={{ scale: 1 }}
     >
@@ -79,9 +79,9 @@ const AlbumPage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
         priority={true}
       />
 
-      <div className="p-3 md:p-6 min-w-screen-60 min-h-screen-90 flex flex-col justify-center items-center">
+      <div className="flex-1 flex flex-col justify-center">
         <motion.div
-          className="grid gap-2 md:gap-6 sm:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-5"
+          className="p-3 md:p-6 grid justify-center gap-2 overflow-y-auto md:gap-6 sm:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-5"
           variants={container}
           initial="hidden"
           animate="show"
