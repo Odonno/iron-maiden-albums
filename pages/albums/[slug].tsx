@@ -60,27 +60,26 @@ const AlbumPage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
   };
 
   return (
-    <div className="min-w-screen min-h-screen bg-gray-600 flex justify-center items-center">
+    <motion.div
+      className="w-screen h-screen bg-gray-600"
+      layoutId={album.name}
+      animate={{ scale: 1 }}
+    >
       <Head>
         <title>Iron Maiden Albums - {album.name}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <motion.div
-        className="p-3 md:p-6 min-w-screen-60 min-h-screen-90 flex flex-col justify-center items-center bg-transparent shadow-lg bg-black relative z-0"
-        animate={{ scale: 1 }}
-        layoutId={album.name}
-      >
-        <Image
-          alt={album.name}
-          src={album.image}
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center"
-          className="rounded -z-1"
-          priority={true}
-        />
+      <Image
+        alt={album.name}
+        src={album.image}
+        layout="fill"
+        objectFit="cover"
+        objectPosition="center"
+        priority={true}
+      />
 
+      <div className="p-3 md:p-6 min-w-screen-60 min-h-screen-90 flex flex-col justify-center items-center">
         <motion.div
           className="grid gap-2 md:gap-6 sm:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-5"
           variants={container}
@@ -100,10 +99,10 @@ const AlbumPage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
                   <motion.div
                     key={song.name}
                     layout
-                    className="p-2 md:p-4 flex flex-col justify-center bg-gray-800 bg-opacity-60 rounded-lg shadow text-gray-300 z-1"
+                    className="p-2 md:p-4 flex flex-col justify-center bg-gray-800 bg-opacity-60 bg-blur-0 rounded-lg shadow text-gray-300"
                     variants={item}
                   >
-                    <div>{"> " + song.name}</div>
+                    <div>{song.name}</div>
                     <div className="text-sm italic">{durationText}</div>
                   </motion.div>
                 );
@@ -115,19 +114,18 @@ const AlbumPage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
                   href={song.link}
                   target="_blank"
                   layout
-                  aria-disabled={isDisabled}
-                  className="p-2 md:p-4 flex flex-col justify-center bg-black bg-opacity-30 disabled:opacity-50 disabled:bg-blue bg-blur-5 rounded-lg shadow text-white cursor-pointer z-1"
+                  className="p-2 md:p-4 flex flex-col justify-center bg-black bg-opacity-30 bg-blur-5 rounded-lg shadow text-white cursor-pointer"
                   variants={item}
                   whileHover={{ scale: 1.05 }}
                 >
-                  <div className="font-bold">{"> " + song.name}</div>
+                  <div className="font-bold">{song.name}</div>
                   <div className="text-sm italic">{durationText}</div>
                 </motion.a>
               );
             })}
         </motion.div>
-      </motion.div>
-    </div>
+      </div>
+    </motion.div>
   );
 };
 
