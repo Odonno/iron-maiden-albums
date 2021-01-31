@@ -32,12 +32,12 @@ export const albums: Album[] = [
       {
         name: "Running Free",
         duration: 3 * 60 + 16,
-        link: "",
+        link: "https://www.youtube.com/watch?v=80Hyz4pOXtE",
       },
       {
         name: "Phantom of the Opera",
         duration: 7 * 60 + 8,
-        link: "",
+        link: "https://www.youtube.com/watch?v=p2ct4xXak24",
       },
       {
         name: "Transylvania",
@@ -70,12 +70,12 @@ export const albums: Album[] = [
       {
         name: "The Ides of March",
         duration: 1 * 60 + 46,
-        link: "",
+        link: "https://www.youtube.com/watch?v=rGJnjSATu50",
       },
       {
         name: "Wrathchild",
         duration: 2 * 60 + 54,
-        link: "",
+        link: "https://www.youtube.com/watch?v=u-3Ka8x4zvE",
       },
       {
         name: "Murders in the Rue Morgue",
@@ -100,12 +100,12 @@ export const albums: Album[] = [
       {
         name: "Killers",
         duration: 5 * 60 + 1,
-        link: "",
+        link: "https://www.youtube.com/watch?v=w1Fw71X4uiM",
       },
       {
         name: "Prodigal Son",
         duration: 6 * 60 + 12,
-        link: "",
+        link: "https://www.youtube.com/watch?v=rbP7Yh8vnmg",
       },
       {
         name: "Purgatory",
@@ -115,7 +115,7 @@ export const albums: Album[] = [
       {
         name: "Drifter",
         duration: 4 * 60 + 49,
-        link: "",
+        link: "https://www.youtube.com/watch?v=qkVJ0GrKBN8",
       },
     ],
   },
@@ -133,12 +133,12 @@ export const albums: Album[] = [
       {
         name: "Children of the Damned",
         duration: 4 * 60 + 34,
-        link: "",
+        link: "https://www.youtube.com/watch?v=wsuj2uhGBvY",
       },
       {
         name: "The Prisoner",
         duration: 5 * 60 + 34,
-        link: "",
+        link: "https://www.youtube.com/watch?v=MLYdFSaE4tk",
       },
       {
         name: "22 Acacia Avenue",
@@ -148,12 +148,12 @@ export const albums: Album[] = [
       {
         name: "The Number of the Beast",
         duration: 4 * 60 + 25,
-        link: "",
+        link: "https://www.youtube.com/watch?v=WxnN05vOuSM",
       },
       {
         name: "Run to the Hills",
         duration: 3 * 60 + 50,
-        link: "",
+        link: "https://www.youtube.com/watch?v=86URGgqONvA",
       },
       {
         name: "Gangland",
@@ -163,7 +163,7 @@ export const albums: Album[] = [
       {
         name: "Hallowed Be Thy Name",
         duration: 7 * 60 + 8,
-        link: "",
+        link: "https://www.youtube.com/watch?v=J51LPlP-s9o",
       },
     ],
   },
@@ -176,12 +176,12 @@ export const albums: Album[] = [
       {
         name: "Aces High",
         duration: 4 * 60 + 29,
-        link: "",
+        link: "https://www.youtube.com/watch?v=Xg9aQvjMS60",
       },
       {
         name: "2 Minutes to Midnight",
         duration: 5 * 60 + 59,
-        link: "",
+        link: "https://www.youtube.com/watch?v=9qbRHY1l0vc",
       },
       {
         name: "Losfer Words (Big 'Orra)",
@@ -206,12 +206,12 @@ export const albums: Album[] = [
       {
         name: "Powerslave",
         duration: 7 * 60 + 8,
-        link: "",
+        link: "https://www.youtube.com/watch?v=Mw-o_cSdqmI",
       },
       {
         name: "Rime of the Ancient Mariner",
         duration: 13 * 60 + 34,
-        link: "",
+        link: "https://www.youtube.com/watch?v=OSDZj_jh5cE",
       },
     ],
   },
@@ -224,7 +224,7 @@ export const albums: Album[] = [
       {
         name: "Caught Somewhere in Time",
         duration: 7 * 60 + 26,
-        link: "",
+        link: "https://www.youtube.com/watch?v=PzUI3-lJmEA",
       },
       {
         name: "Wasted Years",
@@ -259,7 +259,7 @@ export const albums: Album[] = [
       {
         name: "Alexander the Great",
         duration: 8 * 60 + 38,
-        link: "",
+        link: "https://www.youtube.com/watch?v=6BH9HvZx3nI",
       },
     ],
   },
@@ -272,7 +272,7 @@ export const albums: Album[] = [
       {
         name: "Moonchild",
         duration: 5 * 60 + 40,
-        link: "",
+        link: "https://www.youtube.com/watch?v=kvh-aU7KCFY",
       },
       {
         name: "Infinite Dreams",
@@ -282,17 +282,17 @@ export const albums: Album[] = [
       {
         name: "Can I Play with Madness",
         duration: 3 * 60 + 49,
-        link: "",
+        link: "https://www.youtube.com/watch?v=Kvqr366Op3k",
       },
       {
         name: "The Evil that Men Do",
         duration: 4 * 60 + 34,
-        link: "",
+        link: "https://www.youtube.com/watch?v=M6JpxDebokM",
       },
       {
         name: "Seventh Son of a Seventh Son",
         duration: 9 * 60 + 53,
-        link: "",
+        link: "https://www.youtube.com/watch?v=PptHWHfnCnY",
       },
       {
         name: "The Prophecy",
@@ -330,7 +330,7 @@ export const albums: Album[] = [
       {
         name: "No Prayer for the Dying",
         duration: 4 * 60 + 22,
-        link: "",
+        link: "https://www.youtube.com/watch?v=QonEs-Teci4",
       },
       {
         name: "Public Enema Number One",
@@ -360,7 +360,7 @@ export const albums: Album[] = [
       {
         name: "Bring Your Daughter... to the Slaughter",
         duration: 4 * 60 + 42,
-        link: "",
+        link: "https://www.youtube.com/watch?v=m0J7XnbUN5o",
       },
       {
         name: "Mother Russia",
@@ -378,17 +378,17 @@ export const albums: Album[] = [
       {
         name: "Be Quick or Be Dead",
         duration: 3 * 60 + 24,
-        link: "",
+        link: "https://www.youtube.com/watch?v=CTt1vk9nM9c",
       },
       {
         name: "From Here to Eternity",
         duration: 3 * 60 + 38,
-        link: "",
+        link: "https://www.youtube.com/watch?v=MhUUTvgjUFQ",
       },
       {
         name: "Afraid to Shoot Strangers",
         duration: 6 * 60 + 56,
-        link: "",
+        link: "https://www.youtube.com/watch?v=wfcLesynJrc",
       },
       {
         name: "Fear Is the Key",
@@ -398,7 +398,7 @@ export const albums: Album[] = [
       {
         name: "Childhood's End",
         duration: 4 * 60 + 40,
-        link: "",
+        link: "https://www.youtube.com/watch?v=EuHAE5TvW0E",
       },
       {
         name: "Wasting Love",
@@ -413,7 +413,7 @@ export const albums: Album[] = [
       {
         name: "Chains of Misery",
         duration: 3 * 60 + 37,
-        link: "",
+        link: "https://www.youtube.com/watch?v=xmi8p8KncCE",
       },
       {
         name: "The Apparition",
@@ -423,7 +423,7 @@ export const albums: Album[] = [
       {
         name: "Judas Be My Guide",
         duration: 3 * 60 + 8,
-        link: "",
+        link: "https://www.youtube.com/watch?v=dnm2rA0KYOA",
       },
       {
         name: "Weekend Warrior",
@@ -433,7 +433,7 @@ export const albums: Album[] = [
       {
         name: "Fear of the Dark",
         duration: 7 * 60 + 18,
-        link: "",
+        link: "https://www.youtube.com/watch?v=bePCRKGUwAY",
       },
     ],
   },
@@ -461,7 +461,7 @@ export const albums: Album[] = [
       {
         name: "The Clansman",
         duration: 9 * 60 + 6,
-        link: "",
+        link: "https://www.youtube.com/watch?v=UwLtyvGdNbc",
       },
       {
         name: "When Two Worlds Collide",
@@ -476,7 +476,7 @@ export const albums: Album[] = [
       {
         name: "Don't Look to the Eyes of a Stranger",
         duration: 8 * 60 + 11,
-        link: "",
+        link: "https://www.youtube.com/watch?v=pFHD28p-yDw",
       },
       {
         name: "Como Estais Amigos",
@@ -499,12 +499,12 @@ export const albums: Album[] = [
       {
         name: "Ghost of the Navigator",
         duration: 6 * 60 + 50,
-        link: "",
+        link: "https://www.youtube.com/watch?v=q4ZKbYXDZtk",
       },
       {
         name: "Brave New World",
         duration: 6 * 60 + 18,
-        link: "",
+        link: "https://www.youtube.com/watch?v=X5P_muGUJR4",
       },
       {
         name: "Blood Brothers",
@@ -534,12 +534,12 @@ export const albums: Album[] = [
       {
         name: "Out of the Silent Planet",
         duration: 6 * 60 + 25,
-        link: "",
+        link: "https://www.youtube.com/watch?v=dg-AZTTDVj4",
       },
       {
         name: "The Thin Line Between Love & Hate",
         duration: 8 * 60 + 26,
-        link: "",
+        link: "https://www.youtube.com/watch?v=QRxyCLPGDA0",
       },
     ],
   },
@@ -562,7 +562,7 @@ export const albums: Album[] = [
       {
         name: "No More Lies",
         duration: 7 * 60 + 22,
-        link: "",
+        link: "https://www.youtube.com/watch?v=Pp6nqnRJ3hg",
       },
       {
         name: "Montségur",
@@ -572,7 +572,7 @@ export const albums: Album[] = [
       {
         name: "Dance of Death",
         duration: 8 * 60 + 36,
-        link: "",
+        link: "https://www.youtube.com/watch?v=3659fTXvFts",
       },
       {
         name: "Gates of Tomorrow",
@@ -587,7 +587,7 @@ export const albums: Album[] = [
       {
         name: "Paschendale",
         duration: 8 * 60 + 28,
-        link: "",
+        link: "https://www.youtube.com/watch?v=Mx3UPfzGeN4",
       },
       {
         name: "Face in the Sand",
@@ -625,7 +625,7 @@ export const albums: Album[] = [
       {
         name: "Brighter Than a Thousand Suns",
         duration: 8 * 60 + 44,
-        link: "",
+        link: "https://www.youtube.com/watch?v=G5nb4r6gf2I",
       },
       {
         name: "The Pilgrim",
@@ -635,7 +635,7 @@ export const albums: Album[] = [
       {
         name: "The Longest Day",
         duration: 7 * 60 + 46,
-        link: "",
+        link: "https://www.youtube.com/watch?v=ZruY6BUovFo",
       },
       {
         name: "Out of the Shadows",
@@ -650,7 +650,7 @@ export const albums: Album[] = [
       {
         name: "For the Greater Good of God",
         duration: 9 * 60 + 22,
-        link: "",
+        link: "https://www.youtube.com/watch?v=p3Uy1YhBsvs",
       },
       {
         name: "Lord of Light",
@@ -673,7 +673,7 @@ export const albums: Album[] = [
       {
         name: "Satellite 15... The Final Frontier",
         duration: 8 * 60 + 40,
-        link: "",
+        link: "https://www.youtube.com/watch?v=jiOgT_uopI8",
       },
       {
         name: "El Dorado",
@@ -688,7 +688,7 @@ export const albums: Album[] = [
       {
         name: "Coming Home",
         duration: 5 * 60 + 52,
-        link: "",
+        link: "https://www.youtube.com/watch?v=4uec4-GnKj4",
       },
       {
         name: "The Alchemist",
@@ -718,7 +718,7 @@ export const albums: Album[] = [
       {
         name: "When the Wild Wind Blows",
         duration: 11 * 60 + 0,
-        link: "",
+        link: "https://www.youtube.com/watch?v=WmPTxrJ-kHI",
       },
     ],
   },
@@ -731,12 +731,12 @@ export const albums: Album[] = [
       {
         name: "If Eternity Should Fail",
         duration: 8 * 60 + 28,
-        link: "",
+        link: "https://www.youtube.com/watch?v=tFQCDciIibU",
       },
       {
         name: "Speed of Light",
         duration: 5 * 60 + 1,
-        link: "",
+        link: "https://www.youtube.com/watch?v=-F7A24f6gNc",
       },
       {
         name: "The Great Unknown",
@@ -746,7 +746,7 @@ export const albums: Album[] = [
       {
         name: "The Red and the Black",
         duration: 13 * 60 + 33,
-        link: "",
+        link: "https://www.youtube.com/watch?v=uoynC3XpXF8",
       },
       {
         name: "When the River Runs Deep",
@@ -756,7 +756,7 @@ export const albums: Album[] = [
       {
         name: "The Book of Souls",
         duration: 10 * 60 + 27,
-        link: "",
+        link: "https://www.youtube.com/watch?v=FQ0qz5iU6ho",
       },
       {
         name: "Death or Glory",
@@ -771,7 +771,7 @@ export const albums: Album[] = [
       {
         name: "Tears of a Clown",
         duration: 4 * 60 + 59,
-        link: "",
+        link: "https://www.youtube.com/watch?v=KUCp3CsLo5k",
       },
       {
         name: "The Man of Sorrows",
@@ -781,7 +781,7 @@ export const albums: Album[] = [
       {
         name: "Empire of the Clouds",
         duration: 18 * 60 + 1,
-        link: "",
+        link: "https://www.youtube.com/watch?v=YbAhn7iKLPc",
       },
     ],
   },
