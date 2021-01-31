@@ -168,6 +168,59 @@ export const albums: Album[] = [
     ],
   },
   {
+    name: "Piece of Mind",
+    slug: "piece-of-mind",
+    image: "/albums/piece-of-mind.jpg",
+    year: 1983,
+    songs: [
+      {
+        name: "Where Eagles Dare",
+        duration: 6 * 60 + 8,
+        link: "",
+      },
+      {
+        name: "Revelations",
+        duration: 6 * 60 + 51,
+        link: "",
+      },
+      {
+        name: "Flight of Icarus",
+        duration: 3 * 60 + 49,
+        link: "https://www.youtube.com/watch?v=p4w2BZXL6Ss",
+      },
+      {
+        name: "Die With Your Boots On",
+        duration: 5 * 60 + 22,
+        link: "",
+      },
+      {
+        name: "The Trooper",
+        duration: 4 * 60 + 10,
+        link: "https://www.youtube.com/watch?v=X4bgXH3sJ2Q",
+      },
+      {
+        name: "Still Life",
+        duration: 4 * 60 + 37,
+        link: "",
+      },
+      {
+        name: "Quest for Fire",
+        duration: 3 * 60 + 40,
+        link: "",
+      },
+      {
+        name: "Sun and Steel",
+        duration: 3 * 60 + 25,
+        link: "",
+      },
+      {
+        name: "To Tame a Land",
+        duration: 7 * 60 + 26,
+        link: "",
+      },
+    ],
+  },
+  {
     name: "Powerslave",
     slug: "powerslave",
     image: "/albums/powerslave.jpg",
