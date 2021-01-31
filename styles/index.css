@@ -1,6 +1,6 @@
 html,
 body {
-  @apply bg-white text-black;
+  @apply bg-gray-600 text-black;
 }
 
 @layer utilities {

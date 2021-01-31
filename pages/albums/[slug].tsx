@@ -61,7 +61,7 @@ const AlbumPage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
 
   return (
     <motion.div
-      className="w-screen h-allscreen flex bg-gray-600"
+      className="w-screen h-allscreen flex"
       layoutId={album.name}
       animate={{ scale: 1 }}
     >

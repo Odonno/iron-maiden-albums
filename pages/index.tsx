@@ -21,7 +21,7 @@ const HomePage = () => {
   };
 
   return (
-    <div className="min-w-screen min-h-allscreen p-6 bg-gray-600">
+    <div className="min-w-screen min-h-allscreen p-6">
       <Head>
         <title>Iron Maiden Albums</title>
         <link rel="icon" href="/favicon.ico" />
@@ -35,7 +35,11 @@ const HomePage = () => {
       >
         {albums.map((album) => {
           return (
-            <Link key={album.name} href={`/albums/${album.slug}`}>
+            <Link
+              key={album.name}
+              href={`/albums/${album.slug}`}
+              scroll={false}
+            >
               <motion.a
                 className="m-2 md:m-3 w-80 h-80 shadow-lg flex cursor-pointer relative"
                 layout
