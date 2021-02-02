@@ -21,7 +21,7 @@ const HomePage = () => {
   };
 
   return (
-    <div className="min-w-screen min-h-allscreen p-6">
+    <div className="min-w-screen min-h-screen p-6">
       <Head>
         <title>Iron Maiden Albums</title>
         <link rel="icon" href="/favicon.ico" />
