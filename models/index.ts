@@ -491,6 +491,69 @@ export const albums: Album[] = [
     ],
   },
   {
+    name: "The X Factor",
+    slug: "the-x-factor",
+    image: "/albums/the-x-factor.jpg",
+    year: 1995,
+    songs: [
+      {
+        name: "Sign of the Cross",
+        duration: 11 * 60 + 16,
+        link: "https://www.youtube.com/watch?v=le2i7s_BGI4",
+      },
+      {
+        name: "Lord of the Flies",
+        duration: 5 * 60 + 4,
+        link: "",
+      },
+      {
+        name: "Man on the Edge",
+        duration: 4 * 60 + 12,
+        link: "",
+      },
+      {
+        name: "Fortunes of War",
+        duration: 7 * 60 + 24,
+        link: "",
+      },
+      {
+        name: "Look for the Truth",
+        duration: 5 * 60 + 10,
+        link: "",
+      },
+      {
+        name: "The Aftermath",
+        duration: 6 * 60 + 22,
+        link: "",
+      },
+      {
+        name: "Judgement of Heaven",
+        duration: 5 * 60 + 12,
+        link: "",
+      },
+      {
+        name: "Blood on the World's Hands",
+        duration: 5 * 60 + 58,
+        link: "",
+      },
+      {
+        name: "The Edge of Darkness",
+        duration: 6 * 60 + 40,
+        link: "",
+      },
+      {
+        name: "2 A.M.",
+        duration: 5 * 60 + 38,
+        link: "",
+      },
+      {
+        name: "The Unbeliever",
+        duration: 8 * 60 + 10,
+        link: "https://www.youtube.com/watch?v=IUM205PYVd8",
+      },
+    ],
+  },
+  {
     name: "Virtual XI",
     slug: "virtual-XI",
     image: "/albums/virtual-XI.jpg",
