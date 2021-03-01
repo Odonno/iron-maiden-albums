@@ -8,7 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "framer-motion": "^3.6.2",
+    "framer-motion": "^3.7.0",
     "next": "10.0.7",
     "react": "17.0.1",
     "react-div-100vh": "^0.5.6",
