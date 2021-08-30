@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^4.0.2",
-    "@types/node": "^16.7.1",
+    "@types/node": "^16.7.6",
     "@types/react": "^17.0.16",
     "autoprefixer": "^10.3.2",
     "postcss": "^8.3.6",
