@@ -26,6 +26,7 @@ export type Album = {
   name: string;
   slug: string;
   image: string | StaticImageData;
+  blurhash: string;
   year: number;
   songs?: Song[];
 };
@@ -35,6 +36,7 @@ export const albums: Album[] = [
     name: "Iron Maiden",
     slug: "iron-maiden",
     image: ironMaiden,
+    blurhash: "KJHe8lR.9z$;$|o#+}N2-T",
     year: 1980,
     songs: [
       {
@@ -83,6 +85,7 @@ export const albums: Album[] = [
     name: "Killers",
     slug: "killers",
     image: killers,
+    blurhash: "KDC?Pz.59K~BtQxr=zs*%G",
     year: 1981,
     songs: [
       {
@@ -141,6 +144,7 @@ export const albums: Album[] = [
     name: "The Number of the Beast",
     slug: "number-of-the-beast",
     image: numberOfTheBeast,
+    blurhash: "KGDbj6VtX8~Ds:nj^jxujZ",
     year: 1982,
     songs: [
       {
@@ -189,6 +193,7 @@ export const albums: Album[] = [
     name: "Piece of Mind",
     slug: "piece-of-mind",
     image: pieceOfMind,
+    blurhash: "KHD[%iIrE3}bs.xr;UxYWY",
     year: 1983,
     songs: [
       {
@@ -242,6 +247,7 @@ export const albums: Album[] = [
     name: "Powerslave",
     slug: "powerslave",
     image: powerslave,
+    blurhash: "KELDV^NF5]0[?GT208WA4n",
     year: 1984,
     songs: [
       {
@@ -290,6 +296,7 @@ export const albums: Album[] = [
     name: "Somewhere in Time",
     slug: "somewhere-in-time",
     image: somewhereInTime,
+    blurhash: "K9E33a%0A[9D4nxb~pxa%N",
     year: 1986,
     songs: [
       {
@@ -338,6 +345,7 @@ export const albums: Album[] = [
     name: "Seventh Son of a Seventh Son",
     slug: "seventh-son-of-a-seventh-son",
     image: seventhSonOfaSeventhSon,
+    blurhash: "K8JJ3.-N1SUd?wI[009FD4",
     year: 1988,
     songs: [
       {
@@ -386,6 +394,7 @@ export const albums: Album[] = [
     name: "No Prayer for the Dying",
     slug: "no-prayer-for-the-dying",
     image: noPrayerForTheDying,
+    blurhash: "KFFF5M-?1UR5WYRPrLxutO",
     year: 1990,
     songs: [
       {
@@ -444,6 +453,7 @@ export const albums: Album[] = [
     name: "Fear of the Dark",
     slug: "fear-of-the-dark",
     image: fearOfTheDark,
+    blurhash: "K68rOSHX00?]IBN3xcn|OG",
     year: 1992,
     songs: [
       {
@@ -512,6 +522,7 @@ export const albums: Album[] = [
     name: "The X Factor",
     slug: "the-x-factor",
     image: theXFactor,
+    blurhash: "K28W:O0100yYI9^j9sV?^,",
     year: 1995,
     songs: [
       {
@@ -575,6 +586,7 @@ export const albums: Album[] = [
     name: "Virtual XI",
     slug: "virtual-XI",
     image: virtualXI,
+    blurhash: "KED[wr8v$,*|q^Q.m*R3NE",
     year: 1998,
     songs: [
       {
@@ -623,6 +635,7 @@ export const albums: Album[] = [
     name: "Brave New World",
     slug: "brave-new-world",
     image: braveNewWorld,
+    blurhash: "K6GImRtWDj8wL}-r00.TDg",
     year: 2000,
     songs: [
       {
@@ -681,6 +694,7 @@ export const albums: Album[] = [
     name: "Dance of Death",
     slug: "dance-of-death",
     image: danceOfDeath,
+    blurhash: "K4E_5K5jro02}Z1104rv9Z",
     year: 2003,
     songs: [
       {
@@ -744,6 +758,7 @@ export const albums: Album[] = [
     name: "A Matter of Life and Death",
     slug: "a-matter-of-life-and-death",
     image: aMatterOfLifeAndDeath,
+    blurhash: "K28z.D=Ya0_4={Rk0MWrE1",
     year: 2006,
     songs: [
       {
@@ -802,6 +817,7 @@ export const albums: Album[] = [
     name: "The Final Frontier",
     slug: "the-final-frontier",
     image: theFinalFrontier,
+    blurhash: "K69jZ#%jDz=wI-Su^CbCom",
     year: 2010,
     songs: [
       {
@@ -860,6 +876,7 @@ export const albums: Album[] = [
     name: "The Book of Souls",
     slug: "the-book-of-souls",
     image: theBookOfSouls,
+    blurhash: "K57-H8NH00~qoJRP?vj[%1",
     year: 2015,
     songs: [
       {
@@ -923,6 +940,7 @@ export const albums: Album[] = [
     name: "Senjutsu",
     slug: "senjutsu",
     image: senjutsu,
+    blurhash: "K26j%i$Q01}Ho|OT,@NaOE",
     year: 2021,
     songs: [
       {

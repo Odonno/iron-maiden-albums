@@ -8,9 +8,11 @@ import type {
 } from "next";
 import { Album, albums } from "../../models";
 import { motion } from "framer-motion";
+import { generateBlurhashURI } from "../../functions/blurash";
 
 type Props = {
   album: Album;
+  blurDataURL: string;
 };
 
 export const getStaticProps: GetStaticProps<Props> = async (
@@ -23,9 +25,12 @@ export const getStaticProps: GetStaticProps<Props> = async (
     const album = albums.find((a) => a.slug === slug);
 
     if (album) {
+      const blurDataURL = await generateBlurhashURI(album.blurhash, 2000, 2000);
+
       return {
         props: {
           album,
+          blurDataURL,
         },
       };
     }
@@ -42,7 +47,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 const AlbumPage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
-  const { album } = props;
+  const { album, blurDataURL } = props;
 
   const container = {
     hidden: { opacity: 0 },
@@ -73,6 +78,8 @@ const AlbumPage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
         objectFit="cover"
         objectPosition="center"
         priority={true}
+        placeholder="blur"
+        blurDataURL={blurDataURL}
       />
 
       <div className="flex flex-col justify-center flex-1">

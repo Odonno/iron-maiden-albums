@@ -1,10 +1,43 @@
 import { motion } from "framer-motion";
+import {
+  GetStaticProps,
+  GetStaticPropsContext,
+  InferGetStaticPropsType,
+} from "next";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import { generateBlurhashURI } from "../functions/blurash";
 import { albums } from "../models";
 
-const HomePage = () => {
+type Blurahashes = { [key: string]: string };
+
+type Props = {
+  blurhashes: Blurahashes;
+};
+
+export const getStaticProps: GetStaticProps<Props> = async (
+  context: GetStaticPropsContext
+) => {
+  let blurhashes: Blurahashes = {};
+
+  const promises = albums.map(async (album) => {
+    const blurDataURL = await generateBlurhashURI(album.blurhash, 1000, 1000);
+    blurhashes[album.slug] = blurDataURL;
+  });
+
+  await Promise.all(promises);
+
+  return {
+    props: {
+      blurhashes,
+    },
+  };
+};
+
+const HomePage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
+  const { blurhashes } = props;
+
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -39,6 +72,7 @@ const HomePage = () => {
               key={album.name}
               href={`/albums/${album.slug}`}
               scroll={false}
+              passHref
             >
               <motion.a
                 className="relative flex m-2 shadow-lg cursor-pointer md:m-3 w-80 h-80"
@@ -55,6 +89,8 @@ const HomePage = () => {
                   objectPosition="center"
                   className="rounded"
                   priority={true}
+                  placeholder="blur"
+                  blurDataURL={blurhashes[album.slug]}
                 />
               </motion.a>
             </Link>
