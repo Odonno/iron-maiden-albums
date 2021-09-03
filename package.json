@@ -9,13 +9,13 @@
   },
   "dependencies": {
     "framer-motion": "^4.1.17",
-    "next": "11.1.1",
-    "react": "17.0.2",
+    "next": "^11.1.0",
+    "react": "^17.0.2",
     "react-div-100vh": "^0.6.0",
-    "react-dom": "17.0.2"
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^4.0.2",
+    "@tailwindcss/jit": "^0.1.18",
     "@types/node": "^16.7.6",
     "@types/react": "^17.0.16",
     "autoprefixer": "^10.3.3",
