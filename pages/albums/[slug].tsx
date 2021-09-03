@@ -60,11 +60,7 @@ const AlbumPage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
   };
 
   return (
-    <motion.div
-      className="w-screen h-screen flex"
-      layoutId={album.name}
-      animate={{ scale: 1 }}
-    >
+    <motion.div className="flex w-screen h-screen" layoutId={album.name}>
       <Head>
         <title>Iron Maiden Albums - {album.name}</title>
         <link rel="icon" href="/favicon.ico" />
@@ -79,9 +75,9 @@ const AlbumPage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
         priority={true}
       />
 
-      <div className="flex-1 flex flex-col justify-center">
+      <div className="flex flex-col justify-center flex-1">
         <motion.div
-          className="p-3 md:p-6 grid justify-center gap-2 overflow-y-auto md:gap-6 sm:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-5"
+          className="grid justify-center gap-2 p-3 overflow-y-auto md:p-6 md:gap-6 sm:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-5"
           variants={container}
           initial="hidden"
           animate="show"
@@ -99,7 +95,7 @@ const AlbumPage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
                   <motion.div
                     key={song.name}
                     layout
-                    className="p-2 md:p-4 flex flex-col justify-center bg-gray-800 bg-opacity-60 bg-blur-0 rounded-lg shadow text-gray-300"
+                    className="flex flex-col justify-center p-2 text-gray-300 bg-gray-800 rounded-lg shadow md:p-4 bg-opacity-60 bg-blur-0"
                     variants={item}
                   >
                     <div>{song.name}</div>
@@ -114,7 +110,7 @@ const AlbumPage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
                   href={song.link}
                   target="_blank"
                   layout
-                  className="p-2 md:p-4 flex flex-col justify-center bg-black bg-opacity-30 bg-blur-5 rounded-lg shadow text-white cursor-pointer"
+                  className="flex flex-col justify-center p-2 text-white bg-black rounded-lg shadow cursor-pointer md:p-4 bg-opacity-30 bg-blur-5"
                   variants={item}
                   whileHover={{ scale: 1.05 }}
                 >
