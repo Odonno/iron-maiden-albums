@@ -901,4 +901,62 @@ export const albums: Album[] = [
       },
     ],
   },
+  {
+    name: "Senjutsu",
+    slug: "senjutsu",
+    image: "/albums/senjutsu.jpg",
+    year: 2015,
+    songs: [
+      {
+        name: "Senjutsu",
+        duration: 8 * 60 + 20,
+        link: "",
+      },
+      {
+        name: "Stratego",
+        duration: 4 * 60 + 59,
+        link: "https://www.youtube.com/watch?v=mpuwr9fF7kw",
+      },
+      {
+        name: "The Writing On The Wall",
+        duration: 6 * 60 + 13,
+        link: "https://www.youtube.com/watch?v=ouNrpm0zRWg",
+      },
+      {
+        name: "Lost In A Lost World",
+        duration: 9 * 60 + 31,
+        link: "",
+      },
+      {
+        name: "Days of Future Past",
+        duration: 4 * 60 + 3,
+        link: "",
+      },
+      {
+        name: "The Time Machine",
+        duration: 7 * 60 + 9,
+        link: "",
+      },
+      {
+        name: "Darkest Hours",
+        duration: 7 * 60 + 20,
+        link: "",
+      },
+      {
+        name: "Death of the Celts",
+        duration: 10 * 60 + 20,
+        link: "",
+      },
+      {
+        name: "The Parchment",
+        duration: 12 * 60 + 38,
+        link: "https://www.youtube.com/watch?v=dt8uqyirQvM",
+      },
+      {
+        name: "Hell On Earth",
+        duration: 11 * 60 + 19,
+        link: "https://www.youtube.com/watch?v=B1EOkFeD3Ho",
+      },
+    ],
+  },
 ];
