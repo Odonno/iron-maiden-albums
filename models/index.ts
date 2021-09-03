@@ -1,3 +1,21 @@
+import braveNewWorld from "../public/albums/brave-new-world.jpg";
+import senjutsu from "../public/albums/senjutsu.jpg";
+import aMatterOfLifeAndDeath from "../public/albums/a-matter-of-life-and-death.jpg";
+import danceOfDeath from "../public/albums/dance-of-death.jpg";
+import fearOfTheDark from "../public/albums/fear-of-the-dark.jpg";
+import ironMaiden from "../public/albums/iron-maiden.jpg";
+import killers from "../public/albums/killers.jpg";
+import noPrayerForTheDying from "../public/albums/no-prayer-for-the-dying.jpg";
+import numberOfTheBeast from "../public/albums/number-of-the-beast.jpg";
+import pieceOfMind from "../public/albums/piece-of-mind.jpg";
+import powerslave from "../public/albums/powerslave.jpg";
+import seventhSonOfaSeventhSon from "../public/albums/seventh-son-of-a-seventh-son.jpg";
+import somewhereInTime from "../public/albums/somewhere-in-time.jpg";
+import theBookOfSouls from "../public/albums/the-book-of-souls.jpg";
+import theFinalFrontier from "../public/albums/the-final-frontier.jpg";
+import theXFactor from "../public/albums/the-x-factor.jpg";
+import virtualXI from "../public/albums/virtual-XI.jpg";
+
 export type Song = {
   name: string;
   duration: number;
@@ -7,7 +25,7 @@ export type Song = {
 export type Album = {
   name: string;
   slug: string;
-  image: string;
+  image: string | StaticImageData;
   year: number;
   songs?: Song[];
 };
@@ -16,7 +34,7 @@ export const albums: Album[] = [
   {
     name: "Iron Maiden",
     slug: "iron-maiden",
-    image: "/albums/iron-maiden.jpg",
+    image: ironMaiden,
     year: 1980,
     songs: [
       {
@@ -64,7 +82,7 @@ export const albums: Album[] = [
   {
     name: "Killers",
     slug: "killers",
-    image: "/albums/killers.jpg",
+    image: killers,
     year: 1981,
     songs: [
       {
@@ -122,7 +140,7 @@ export const albums: Album[] = [
   {
     name: "The Number of the Beast",
     slug: "number-of-the-beast",
-    image: "/albums/number-of-the-beast.jpg",
+    image: numberOfTheBeast,
     year: 1982,
     songs: [
       {
@@ -170,7 +188,7 @@ export const albums: Album[] = [
   {
     name: "Piece of Mind",
     slug: "piece-of-mind",
-    image: "/albums/piece-of-mind.jpg",
+    image: pieceOfMind,
     year: 1983,
     songs: [
       {
@@ -223,7 +241,7 @@ export const albums: Album[] = [
   {
     name: "Powerslave",
     slug: "powerslave",
-    image: "/albums/powerslave.jpg",
+    image: powerslave,
     year: 1984,
     songs: [
       {
@@ -271,7 +289,7 @@ export const albums: Album[] = [
   {
     name: "Somewhere in Time",
     slug: "somewhere-in-time",
-    image: "/albums/somewhere-in-time.jpg",
+    image: somewhereInTime,
     year: 1986,
     songs: [
       {
@@ -319,7 +337,7 @@ export const albums: Album[] = [
   {
     name: "Seventh Son of a Seventh Son",
     slug: "seventh-son-of-a-seventh-son",
-    image: "/albums/seventh-son-of-a-seventh-son.jpg",
+    image: seventhSonOfaSeventhSon,
     year: 1988,
     songs: [
       {
@@ -367,7 +385,7 @@ export const albums: Album[] = [
   {
     name: "No Prayer for the Dying",
     slug: "no-prayer-for-the-dying",
-    image: "/albums/no-prayer-for-the-dying.jpg",
+    image: noPrayerForTheDying,
     year: 1990,
     songs: [
       {
@@ -424,8 +442,8 @@ export const albums: Album[] = [
   },
   {
     name: "Fear of the Dark",
-    slug: "fear-fo-the-dark",
-    image: "/albums/fear-fo-the-dark.jpg",
+    slug: "fear-of-the-dark",
+    image: fearOfTheDark,
     year: 1992,
     songs: [
       {
@@ -493,7 +511,7 @@ export const albums: Album[] = [
   {
     name: "The X Factor",
     slug: "the-x-factor",
-    image: "/albums/the-x-factor.jpg",
+    image: theXFactor,
     year: 1995,
     songs: [
       {
@@ -556,7 +574,7 @@ export const albums: Album[] = [
   {
     name: "Virtual XI",
     slug: "virtual-XI",
-    image: "/albums/virtual-XI.jpg",
+    image: virtualXI,
     year: 1998,
     songs: [
       {
@@ -604,7 +622,7 @@ export const albums: Album[] = [
   {
     name: "Brave New World",
     slug: "brave-new-world",
-    image: "/albums/brave-new-world.jpg",
+    image: braveNewWorld,
     year: 2000,
     songs: [
       {
@@ -662,7 +680,7 @@ export const albums: Album[] = [
   {
     name: "Dance of Death",
     slug: "dance-of-death",
-    image: "/albums/dance-of-death.jpg",
+    image: danceOfDeath,
     year: 2003,
     songs: [
       {
@@ -725,7 +743,7 @@ export const albums: Album[] = [
   {
     name: "A Matter of Life and Death",
     slug: "a-matter-of-life-and-death",
-    image: "/albums/a-matter-of-life-and-death.jpg",
+    image: aMatterOfLifeAndDeath,
     year: 2006,
     songs: [
       {
@@ -783,7 +801,7 @@ export const albums: Album[] = [
   {
     name: "The Final Frontier",
     slug: "the-final-frontier",
-    image: "/albums/the-final-frontier.jpg",
+    image: theFinalFrontier,
     year: 2010,
     songs: [
       {
@@ -841,7 +859,7 @@ export const albums: Album[] = [
   {
     name: "The Book of Souls",
     slug: "the-book-of-souls",
-    image: "/albums/the-book-of-souls.jpg",
+    image: theBookOfSouls,
     year: 2015,
     songs: [
       {
@@ -904,8 +922,8 @@ export const albums: Album[] = [
   {
     name: "Senjutsu",
     slug: "senjutsu",
-    image: "/albums/senjutsu.jpg",
-    year: 2015,
+    image: senjutsu,
+    year: 2021,
     songs: [
       {
         name: "Senjutsu",
@@ -930,7 +948,7 @@ export const albums: Album[] = [
       {
         name: "Days of Future Past",
         duration: 4 * 60 + 3,
-        link: "",
+        link: "https://www.youtube.com/watch?v=FiLaLcB7SeM",
       },
       {
         name: "The Time Machine",

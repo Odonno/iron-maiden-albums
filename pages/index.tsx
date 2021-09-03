@@ -21,7 +21,7 @@ const HomePage = () => {
   };
 
   return (
-    <div className="min-w-screen min-h-screen p-6">
+    <div className="min-h-screen p-6 min-w-screen">
       <Head>
         <title>Iron Maiden Albums</title>
         <link rel="icon" href="/favicon.ico" />
@@ -41,7 +41,7 @@ const HomePage = () => {
               scroll={false}
             >
               <motion.a
-                className="m-2 md:m-3 w-80 h-80 shadow-lg flex cursor-pointer relative"
+                className="relative flex m-2 shadow-lg cursor-pointer md:m-3 w-80 h-80"
                 layout
                 layoutId={album.name}
                 variants={item}
