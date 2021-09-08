@@ -92,6 +92,7 @@ const HomePage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
         className="inline-flex items-center self-end justify-center h-20 p-4 mb-6 -mt-2 text-white bg-gray-700 rounded-lg"
         variants={spotifyContainer}
         initial="prepand"
+        whileTap="expand"
         whileHover="expand"
       >
         <motion.div variants={spotifyItem} className="mr-4">
