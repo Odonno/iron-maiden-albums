@@ -676,7 +676,7 @@ export const albums: Album[] = [
       {
         name: "The Nomad",
         duration: 9 * 60 + 6,
-        link: "",
+        link: "https://www.youtube.com/watch?v=CX2BpyXIqwI",
       },
       {
         name: "Out of the Silent Planet",
