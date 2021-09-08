@@ -75,7 +75,9 @@ const HomePage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
         initial="hidden"
         animate="show"
       >
-        {albums.map((album) => {
+        {albums.map((album, index) => {
+          const priority = index <= 3;
+
           return (
             <Link
               key={album.name}
@@ -98,7 +100,7 @@ const HomePage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
                   objectFit="cover"
                   objectPosition="center"
                   className="rounded"
-                  priority={true}
+                  priority={priority}
                   placeholder="blur"
                   blurDataURL={blurhashes[album.slug]}
                 />
