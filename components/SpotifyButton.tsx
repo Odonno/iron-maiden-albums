@@ -54,7 +54,7 @@ export const SpotifyButton = () => {
         href={spotifyPlaylistUrl}
         target="_blank"
         rel="noreferrer"
-        className="flex items-center self-auto self-end justify-center h-20 p-4 mb-6 -mt-2 text-white bg-gray-700 rounded-lg sm:hidden"
+        className="flex items-center self-auto justify-center h-20 p-4 mb-6 -mt-2 text-white bg-gray-700 rounded-lg sm:hidden"
       >
         {content}
       </a>
