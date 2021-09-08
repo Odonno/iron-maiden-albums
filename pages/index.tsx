@@ -1,4 +1,4 @@
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   GetStaticProps,
   GetStaticPropsContext,
@@ -7,12 +7,9 @@ import {
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import { SpotifyButton } from "../components/SpotifyButton";
 import { generateBlurhashURI } from "../functions/blurash";
 import { albums } from "../models";
-import spotifyImage from "../public/icons/spotify.png";
-
-const spotifyPlaylistUrl =
-  "https://open.spotify.com/playlist/71ceynt9bxrNkoMuAodpts?si=4c3b8790135f456d";
 
 type Blurahashes = { [key: string]: string };
 
@@ -51,31 +48,9 @@ const HomePage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
       },
     },
   };
-
-  const spotifyContainer = {
-    prepand: { width: 80 },
-    expand: { width: 360 },
-  };
-
   const item = {
     hidden: { opacity: 0 },
     show: { opacity: 1 },
-  };
-
-  const spotifyItem = {
-    prepand: {
-      visibility: "hidden",
-      transition: { duration: 2 },
-    } as Variants,
-    expand: {
-      visibility: "visible",
-      transition: { delay: 0.2 },
-    } as Variants,
-  };
-
-  const altSpotifyItem = {
-    prepand: { translateX: 0 },
-    expand: { translateX: 0 },
   };
 
   return (
@@ -85,31 +60,7 @@ const HomePage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <motion.a
-        href={spotifyPlaylistUrl}
-        target="_blank"
-        rel="noreferrer"
-        className="inline-flex items-center self-end justify-center h-20 p-4 mb-6 -mt-2 text-white bg-gray-700 rounded-lg"
-        variants={spotifyContainer}
-        initial="prepand"
-        whileTap="expand"
-        whileHover="expand"
-      >
-        <motion.div variants={spotifyItem} className="mr-4">
-          <div>Playlist - Iron Maiden, only the best</div>
-          <div className="text-sm italic">69 songs - 7h 43min</div>
-        </motion.div>
-
-        <motion.div variants={altSpotifyItem}>
-          <Image
-            src={spotifyImage}
-            alt=""
-            layout="fixed"
-            width={40}
-            height={40}
-          />
-        </motion.div>
-      </motion.a>
+      <SpotifyButton />
 
       <motion.div
         className="flex flex-wrap justify-evenly"
