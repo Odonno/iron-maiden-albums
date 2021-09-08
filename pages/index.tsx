@@ -48,9 +48,16 @@ const HomePage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
       },
     },
   };
+
   const item = {
     hidden: { opacity: 0 },
     show: { opacity: 1 },
+    albumHover: { scale: 1.05 },
+  };
+
+  const albumChildItem = {
+    album: { opacity: 0, background: "#333333AA" },
+    albumHover: { opacity: 1, background: "#333333AA" },
   };
 
   return (
@@ -81,7 +88,8 @@ const HomePage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
                 layout
                 layoutId={album.name}
                 variants={item}
-                whileHover={{ scale: 1.05 }}
+                initial="album"
+                whileHover="albumHover"
               >
                 <Image
                   alt={album.name}
@@ -94,6 +102,19 @@ const HomePage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
                   placeholder="blur"
                   blurDataURL={blurhashes[album.slug]}
                 />
+
+                <motion.div
+                  className="z-10 w-full p-4 text-white"
+                  variants={albumChildItem}
+                >
+                  <div className="text-2xl">{album.name}</div>
+                  <div className="mt-1">{album.year}</div>
+                  {album.songs && (
+                    <div className="mt-1 text-xs italic">
+                      {album.songs.length} songs
+                    </div>
+                  )}
+                </motion.div>
               </motion.a>
             </Link>
           );
