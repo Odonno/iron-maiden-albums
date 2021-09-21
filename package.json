@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "@tailwindcss/jit": "^0.1.18",
-    "@types/node": "^16.7.6",
+    "@types/node": "^16.9.4",
     "@types/react": "^17.0.20",
     "@types/sharp": "^0.28.6",
     "autoprefixer": "^10.3.4",
