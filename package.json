@@ -15,7 +15,7 @@
     "react": "^17.0.2",
     "react-div-100vh": "^0.6.0",
     "react-dom": "^17.0.2",
-    "sharp": "^0.29.2"
+    "sharp": "^0.30.6"
   },
   "devDependencies": {
     "@tailwindcss/jit": "^0.1.18",
