@@ -33,7 +33,7 @@ export const SpotifyButton = () => {
         <div className="text-sm sm:text-base">
           Playlist - Iron Maiden, only the best
         </div>
-        <div className="text-xs italic sm:text-sm">69 songs - 7h 43min</div>
+        <div className="text-xs italic sm:text-sm">71 songs - 7h 57min</div>
       </motion.div>
 
       <motion.div variants={altItem}>
