@@ -15,6 +15,7 @@ import theBookOfSouls from "../public/albums/the-book-of-souls.jpg";
 import theFinalFrontier from "../public/albums/the-final-frontier.jpg";
 import theXFactor from "../public/albums/the-x-factor.jpg";
 import virtualXI from "../public/albums/virtual-XI.jpg";
+import { StaticImageData } from "next/legacy/image";
 
 export type Song = {
   name: string;
