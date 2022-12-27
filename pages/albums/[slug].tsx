@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import type {
   GetStaticPaths,
   GetStaticProps,
@@ -74,12 +74,10 @@ const AlbumPage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
       <Image
         alt={album.name}
         src={album.image}
-        layout="fill"
-        objectFit="cover"
-        objectPosition="center"
         priority={true}
         placeholder="blur"
         blurDataURL={blurDataURL}
+        className="object-cover w-screen h-screen absolute"
       />
 
       <div className="flex flex-col justify-center flex-1">
@@ -102,7 +100,7 @@ const AlbumPage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
                   <motion.div
                     key={song.name}
                     layout
-                    className="flex flex-col justify-center p-2 text-gray-300 bg-gray-800 rounded-lg shadow md:p-4 bg-opacity-60 bg-blur-0"
+                    className="flex flex-col justify-center p-2 text-gray-300 bg-gray-800 rounded-lg shadow md:p-4 bg-opacity-60"
                     variants={item}
                   >
                     <div>{song.name}</div>
@@ -116,10 +114,11 @@ const AlbumPage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
                   key={song.name}
                   href={song.link}
                   target="_blank"
+                  rel="noreferrer"
                   layout
-                  className="flex flex-col justify-center p-2 text-white bg-black rounded-lg shadow cursor-pointer md:p-4 bg-opacity-30 bg-blur-5"
                   variants={item}
                   whileHover={{ scale: 1.05 }}
+                  className="flex flex-col justify-center p-2 text-white bg-black rounded-lg shadow cursor-pointer md:p-4 bg-opacity-30 backdrop-blur-sm"
                 >
                   <div className="font-bold">{song.name}</div>
                   <div className="text-sm italic">{durationText}</div>

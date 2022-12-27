@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 import Head from "next/head";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from "next/link";
 import { SpotifyButton } from "../components/SpotifyButton";
 import { generateBlurhashURI } from "../functions/blurash";
@@ -91,14 +91,16 @@ const HomePage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
                 <Image
                   alt={album.name}
                   src={album.image}
-                  layout="fill"
-                  objectFit="cover"
-                  objectPosition="center"
                   className="rounded"
                   priority={priority}
                   placeholder="blur"
                   blurDataURL={blurhashes[album.slug]}
-                />
+                  fill
+                  sizes="100vw"
+                  style={{
+                    objectFit: "cover",
+                    objectPosition: "center"
+                  }} />
 
                 <motion.div
                   className="z-10 w-full p-4 text-white"
