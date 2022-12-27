@@ -6,7 +6,7 @@ import type {
   GetStaticPropsContext,
   InferGetStaticPropsType,
 } from "next";
-import { Album, albums } from "../../models";
+import { Album, albums, Song } from "../../models";
 import { motion } from "framer-motion";
 import { generateBlurhashURI } from "../../functions/blurash";
 
@@ -90,7 +90,7 @@ const AlbumPage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
           animate="show"
         >
           {album.songs &&
-            album.songs.map((song) => {
+            album.songs.map((song: Song) => {
               const seconds = (song.duration % 60).toString().padStart(2, "0");
               const minutes = Math.floor(song.duration / 60);
               const durationText = `${minutes}:${seconds}`;
