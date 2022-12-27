@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "next dev",
+    "lint": "next lint",
+    "preinstall": "npx only-allow pnpm",
+    "start": "next start"
   },
   "dependencies": {
     "blurhash": "^1.1.4",
