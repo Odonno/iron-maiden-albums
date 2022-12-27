@@ -1,9 +1,5 @@
 import { motion } from "framer-motion";
-import {
-  GetStaticProps,
-  GetStaticPropsContext,
-  InferGetStaticPropsType,
-} from "next";
+import { GetStaticProps, InferGetStaticPropsType } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
@@ -17,9 +13,7 @@ type Props = {
   blurhashes: Blurahashes;
 };
 
-export const getStaticProps: GetStaticProps<Props> = async (
-  context: GetStaticPropsContext
-) => {
+export const getStaticProps: GetStaticProps<Props> = async () => {
   let blurhashes: Blurahashes = {};
 
   const promises = albums.map(async (album) => {
@@ -70,7 +64,8 @@ const HomePage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
       <SpotifyButton />
 
       <motion.div
-        className="flex flex-wrap justify-evenly"
+        className="grid gap-4 md:gap-8"
+        style={{ gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))" }}
         variants={container}
         initial="hidden"
         animate="show"
@@ -86,7 +81,7 @@ const HomePage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
               passHref
             >
               <motion.a
-                className="relative flex m-2 shadow-lg cursor-pointer md:m-3 w-80 h-80"
+                className="relative flex shadow-lg cursor-pointer w-80 h-80 justify-self-center"
                 layout
                 layoutId={album.name}
                 variants={item}
