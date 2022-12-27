@@ -1,5 +1,5 @@
 import { motion, Variants } from "framer-motion";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import spotifyImage from "../public/icons/spotify.png";
 
 const spotifyPlaylistUrl =

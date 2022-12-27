@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 import Head from "next/head";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 import { SpotifyButton } from "../components/SpotifyButton";
 import { generateBlurhashURI } from "../functions/blurash";
@@ -80,7 +80,7 @@ const HomePage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
               scroll={false}
               passHref
             >
-              <motion.a
+              <motion.div
                 className="relative flex shadow-lg cursor-pointer w-80 h-80 justify-self-center"
                 layout
                 layoutId={album.name}
@@ -112,7 +112,7 @@ const HomePage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
                     </div>
                   )}
                 </motion.div>
-              </motion.a>
+              </motion.div>
             </Link>
           );
         })}
