@@ -16,12 +16,12 @@
     "react": "^18.2.0",
     "react-div-100vh": "^0.6.0",
     "react-dom": "^18.2.0",
-    "sharp": "^0.29.2"
+    "sharp": "^0.31.3"
   },
   "devDependencies": {
     "@types/node": "^16.11.6",
     "@types/react": "^17.0.32",
-    "@types/sharp": "^0.29.2",
+    "@types/sharp": "^0.31.0",
     "autoprefixer": "^10.4.13",
     "eslint": "^7.32.0",
     "eslint-config-next": "^13.1.1",
