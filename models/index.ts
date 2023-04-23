@@ -29,7 +29,14 @@ export type Album = {
   image: string | StaticImageData;
   blurhash: string;
   year: number;
-  songs?: Song[];
+  songs: Song[];
+};
+
+export type SongWithAlbum = {
+  name: string;
+  duration: number;
+  link: string;
+  album: Omit<Album, "songs">;
 };
 
 export const albums: Album[] = [
@@ -997,3 +1004,10 @@ export const albums: Album[] = [
     ],
   },
 ];
+
+export const songs: SongWithAlbum[] = albums.flatMap((album) =>
+  album.songs.map((song) => ({
+    ...song,
+    album: { ...album, songs: undefined },
+  }))
+);
