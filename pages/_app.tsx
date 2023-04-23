@@ -1,4 +1,5 @@
 import "../styles/tailwind.css";
+import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { AnimateSharedLayout, motion } from "framer-motion";
 import { use100vh } from "react-div-100vh";
